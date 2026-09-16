@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bryan Huang | Developer Portfolio</title>
+  <meta name="description" content="Personal portfolio and software projects by Bryan Huang." />
+
+  <!-- Modern typography via Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg: #0d1117;
+      --card-bg: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-muted: #8b949e;
+      --heading: #f0f6fc;
+      --accent: #58a6ff;
+      --accent-hover: #79c0ff;
+      --tag-bg: #21262d;
+      --radius: 8px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.65;
+      padding: 0 1.5rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 780px;
+      padding: 4rem 0;
+    }
+
+    header {
+      margin-bottom: 3.5rem;
+    }
+
+    .name-title {
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    h1 {
+      color: var(--heading);
+      font-size: 2.25rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .tagline {
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--accent);
+      font-size: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    .bio {
+      margin-top: 1.25rem;
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      max-width: 650px;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-link {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.4rem 0.9rem;
+      background: var(--tag-bg);
+      color: var(--heading);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      font-size: 0.875rem;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .btn-link:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      transform: translateY(-1px);
+    }
+
+    section {
+      margin-bottom: 3.5rem;
+    }
+
+    h2 {
+      color: var(--heading);
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    h2::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+      margin-left: 0.75rem;
+    }
+
+    .grid {
+      display: grid;
+      gap: 1.25rem;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      transition: border-color 0.2s ease;
+    }
+
+    .card:hover {
+      border-color: #58a6ff66;
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.5rem;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .card-title {
+      color: var(--heading);
+      font-size: 1.1rem;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .card-title:hover {
+      color: var(--accent);
+    }
+
+    .card-date {
+      font-size: 0.8rem;
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--text-muted);
+    }
+
+    .card-desc {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .tag {
+      background: var(--tag-bg);
+      color: var(--accent);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      padding: 0.2rem 0.55rem;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding-top: 2rem;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    footer a {
+      color: var(--text-muted);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: var(--accent);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header / Hero -->
+    <header>
+      <div class="name-title">
+        <h1>Bryan Huang</h1>
+      </div>
+      <div class="tagline">Computer Science Student &amp; Developer</div>
+      <p class="bio">
+        Building software, exploring systems, and solving problems. Currently focusing on full-stack web applications, distributed tools, and data-driven systems.
+      </p>
+      
+      <div class="social-links">
+        <a href="https://github.com/your-username" class="btn-link" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://linkedin.com/in/your-username" class="btn-link" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:your-email@example.com" class="btn-link">Email</a>
+      </div>
+    </header>
+
+    <!-- Selected Projects -->
+    <section>
+      <h2>Featured Projects</h2>
+      <div class="grid">
+        
+        <div class="card">
+          <div class="card-header">
+            <a href="https://github.com/your-username/project-one" class="card-title" target="_blank" rel="noopener">
+              Project Name ↗
+            </a>
+            <span class="card-date">2026</span>
+          </div>
+          <p class="card-desc">
+            A high-performance web tool built to solve a specific workflow problem. Features real-time state synchronization and automated data processing.
+          </p>
+          <div class="tags">
+            <span class="tag">TypeScript</span>
+            <span class="tag">React</span>
+            <span class="tag">Node.js</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <a href="https://github.com/your-username/project-two" class="card-title" target="_blank" rel="noopener">
+              Systems &amp; Algorithm Explorer ↗
+            </a>
+            <span class="card-date">2025</span>
+          </div>
+          <p class="card-desc">
+            An interactive visualization tool demonstrating core data structures and memory allocation models for computer science coursework.
+          </p>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">C</span>
+            <span class="tag">Algorithms</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Skills / Tech Stack -->
+    <section>
+      <h2>Tech Stack</h2>
+      <div class="card">
+        <div class="tags" style="gap: 0.6rem;">
+          <span class="tag">Java</span>
+          <span class="tag">Python</span>
+          <span class="tag">C / C++</span>
+          <span class="tag">JavaScript / TypeScript</span>
+          <span class="tag">HTML / CSS</span>
+          <span class="tag">Git &amp; GitHub</span>
+          <span class="tag">Linux</span>
+          <span class="tag">Firebase</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <span>&copy; 2026 Bryan Huang</span>
+      <span>Hosted via GitHub Pages</span>
+    </footer>
+  </div>
+</body>
+</html>
