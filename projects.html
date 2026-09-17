@@ -166,6 +166,54 @@
       margin-top: -0.5rem;
     }
 
+    figure.project-figure {
+      margin: 0.25rem 0 0.5rem 0;
+      background: #090d13;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    figure.project-figure.white-bg {
+      background: #ffffff;
+    }
+
+    figure.project-figure a {
+      display: block;
+      cursor: zoom-in;
+      overflow: hidden;
+      text-decoration: none;
+    }
+
+    figure.project-figure img {
+      width: 100%;
+      height: auto;
+      max-height: 420px;
+      display: block;
+      transition: transform 0.2s ease;
+    }
+
+    figure.project-figure.white-bg img {
+      max-height: 340px;
+      width: auto;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+
+    figure.project-figure a:hover img {
+      transform: scale(1.015);
+    }
+
+    figure.project-figure figcaption {
+      padding: 0.65rem 1rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-family: 'JetBrains Mono', monospace;
+      line-height: 1.45;
+      background: var(--tag-bg);
+      border-top: 1px solid var(--border);
+    }
+
     ul.bullets {
       padding-left: 1.2rem;
       color: var(--text);
@@ -298,6 +346,14 @@
           <span class="project-meta">Python &bull; NumPy</span>
         </div>
         <div class="project-subtitle">Multilayer Perceptron &amp; Hand-Derived Backpropagation</div>
+
+        <figure class="project-figure white-bg">
+          <a href="./images/mnist-neural-net-demo.png" target="_blank" rel="noopener" title="Click to view full image">
+            <img src="./images/mnist-neural-net-demo.png" alt="MNIST handwritten digit classification demo showing activation probabilities" loading="lazy" />
+          </a>
+          <figcaption>Interactive inspector: classifying test digit '2' alongside output layer activation probabilities (99%+ confidence)</figcaption>
+        </figure>
+
         <ul class="bullets">
           <li>Engineered and implemented a multilayer perceptron (784-16-16-10 structure, ~13K parameters) from scratch using NumPy with no machine learning libraries.</li>
           <li>Derived analytical matrix gradients by hand to train with a custom stochastic gradient descent (SGD) loop, achieving <strong>90% test accuracy</strong>.</li>
@@ -312,7 +368,7 @@
           <span class="tag">SGD Optimization</span>
         </div>
         <div class="project-actions">
-          <a href="https://github.com/bryanmsh" target="_blank" rel="noopener" class="btn">View on GitHub ↗</a>
+          <a href="https://github.com/bryanmsh/neural-net-from-scratch" target="_blank" rel="noopener" class="btn">View on GitHub ↗</a>
         </div>
       </article>
 
@@ -323,6 +379,14 @@
           <span class="project-meta">2023 – 2025</span>
         </div>
         <div class="project-subtitle">Delaware Bridge Design Competition &bull; 1st Place State Champions</div>
+
+        <figure class="project-figure">
+          <a href="./images/bridge-2025-load-test.jpg" target="_blank" rel="noopener" title="Click to view full image">
+            <img src="./images/bridge-2025-load-test.jpg" alt="Delaware Bridge Design Competition physical load testing on test rig" loading="lazy" />
+          </a>
+          <figcaption>Delaware Bridge Design Competition: physical destructive load testing of the deck arch bridge on custom test platform</figcaption>
+        </figure>
+
         <ul class="bullets">
           <li>Designed, simulated, and assembled optimized balsa wood bridges across three years of iterative competition.</li>
           <li>Constructed 3D beam member assemblies and performed stress and displacement simulations using SOLIDWORKS.</li>
