@@ -18,7 +18,7 @@ This repository hosts the source code for [bhuang.dev](https://bhuang.dev), a li
   - **Skills:** Python, Java, AutoHotkey, SOLIDWORKS, AutoCAD, Fusion 360, Revit, Onshape.
   - **Contact:** Interactive contact modal with direct contact channels.
 - **Projects (`projects.html`)**
-  - **Neural Network from Scratch:** Multilayer perceptron (784-16-16-10) with hand-derived matrix backpropagation and custom stochastic gradient descent (SGD) achieving 90% test accuracy on MNIST digits without ML libraries.
+  - **Neural Network from Scratch:** Multilayer perceptron (784-16-16-10) with hand-derived matrix backpropagation and custom stochastic gradient descent (SGD) achieving 94.2% test accuracy on MNIST digits without ML libraries.
   - **Deck Arch Truss Bridge Design:** Three years of competitive structural design, 1st Place State Champions in the Delaware Bridge Design Competition.
 - **Engineering Case Study (`engineering.html`)**
   - Detailed case study of CAD modeling, FEA stress/displacement simulations in SOLIDWORKS, empirical calibration (2.52–3.02 scaling factors), and steam-bent monolithic arch manufacturing.
