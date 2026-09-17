@@ -193,16 +193,46 @@
       margin-bottom: 1rem;
     }
 
-    .media-placeholder {
+    figure.project-figure {
+      margin: 1.5rem 0;
       background: #090d13;
-      border: 1px dashed var(--border);
-      border-radius: 6px;
-      padding: 1.5rem;
-      margin: 1.25rem 0;
-      text-align: center;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    figure.project-figure img {
+      width: 100%;
+      height: auto;
+      display: block;
+      background: #0d1117;
+    }
+
+    figure.project-figure figcaption {
+      padding: 0.75rem 1rem;
+      font-size: 0.82rem;
       color: var(--text-muted);
-      font-size: 0.85rem;
       font-family: 'JetBrains Mono', monospace;
+      line-height: 1.45;
+      background: var(--tag-bg);
+      border-top: 1px solid var(--border);
+    }
+
+    .figure-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+      margin: 1.5rem 0;
+    }
+
+    .figure-grid figure.project-figure {
+      margin: 0;
+    }
+
+    .figure-single {
+      max-width: 520px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     blockquote {
@@ -318,6 +348,11 @@
         <span class="pill">Iterative FEA Optimization</span>
         <span class="pill">Precision Assembly</span>
       </div>
+
+      <figure class="project-figure figure-single" style="margin-top: 1.5rem; margin-bottom: 0;">
+        <img src="./images/bridge-cad-sim.jpg" alt="Modeling structural members and running load simulations in SOLIDWORKS" loading="lazy" />
+        <figcaption>Modeling structural members and running load simulations in SOLIDWORKS.</figcaption>
+      </figure>
     </div>
 
     <!-- Iteration 1 -->
@@ -329,8 +364,15 @@
         For my first attempt, I leveraged the structural members feature in SOLIDWORKS to model beam profiles and predict stress nodes. After evaluating different truss behaviors, our team selected an integrated <strong>X and Howe truss</strong> configuration to drive load outward towards the abutments.
       </p>
 
-      <div class="media-placeholder">
-        [Image: Initial CAD Truss Models &amp; Balsa Assembly]
+      <div class="figure-grid">
+        <figure class="project-figure">
+          <img src="./images/bridge-2023-design-sketches.jpg" alt="Design sketches translated into a SOLIDWORKS structural model" loading="lazy" />
+          <figcaption>Design sketches translated into a SOLIDWORKS structural model.</figcaption>
+        </figure>
+        <figure class="project-figure">
+          <img src="./images/bridge-2023-assembly.jpg" alt="Hand-cutting and assembling balsa wood components for the 2023 build" loading="lazy" />
+          <figcaption>Hand-cutting and assembling balsa wood components for the 2023 build.</figcaption>
+        </figure>
       </div>
 
       <p>
@@ -347,9 +389,10 @@
         Aiming to advance beyond a standard truss, I explored research on auxiliary arch reinforcement systems. The design incorporated a secondary internal curve to brace top-deck deflection.
       </p>
 
-      <div class="media-placeholder">
-        [Image: 2024 Auxiliary Arch SolidWorks Model]
-      </div>
+      <figure class="project-figure figure-single">
+        <img src="./images/bridge-2024-aux-arch.jpg" alt="The completed 2024 auxiliary-arch design, modeled in SOLIDWORKS" loading="lazy" />
+        <figcaption>The completed 2024 auxiliary-arch design, modeled in SOLIDWORKS.</figcaption>
+      </figure>
 
       <p>
         Constructing the secondary arch required almost double the truss cuts and complex pin-jig alignment. However, testing exposed a critical trade-off: the secondary structure added significant dead load, making the bridge <strong>50% heavier</strong> than the 2023 version without a proportional gain in yield capacity. The resulting strength-to-weight ratio dropped, providing a direct lesson in balancing structural complexity against raw mass penalties.
@@ -365,8 +408,15 @@
         Rather than introducing more components, I revisited the 2023 foundation and calibrated our digital tools. I uncovered simulation discrepancies in SOLIDWORKS caused by varying member fixtures and unmodeled joint laminations.
       </p>
 
-      <div class="media-placeholder">
-        [Image: 8 Design Iterations &amp; Single Piece Arch Clamping Jig]
+      <div class="figure-grid">
+        <figure class="project-figure">
+          <img src="./images/bridge-2025-iterations.jpg" alt="Design evolution across months of testing: Design 1 vs. Design 8" loading="lazy" />
+          <figcaption>The design vastly changed over months of testing (Design 1 vs. Design 8).</figcaption>
+        </figure>
+        <figure class="project-figure">
+          <img src="./images/bridge-2025-bending-jig.jpg" alt="Steam-bending and clamping jig for a single continuous monolithic arch" loading="lazy" />
+          <figcaption>Steam-bending and clamping jig for a single continuous monolithic arch.</figcaption>
+        </figure>
       </div>
 
       <p>
@@ -376,6 +426,11 @@
         <li>Iterated through <strong>8 distinct CAD models</strong> using calibrated FEA stress analysis.</li>
         <li>Eliminated segmented joint weaknesses by steam-bending and clamping the main arch into a <strong>single continuous monolithic curve</strong> instead of segmented glued pieces.</li>
       </ul>
+
+      <figure class="project-figure" style="margin-top: 1.5rem;">
+        <img src="./images/bridge-2025-load-test.jpg" alt="Load testing the final 2025 design at competition" loading="lazy" />
+        <figcaption>Load testing the final 2025 design on the official competition testing platform.</figcaption>
+      </figure>
     </div>
 
     <!-- Reflection -->
