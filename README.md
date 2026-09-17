@@ -34,27 +34,6 @@ This repository hosts the source code for [bhuang.dev](https://bhuang.dev), a li
 
 ---
 
-## 💻 Local Development
-
-No build tools, bundlers, or package managers required. To preview the site locally:
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/bryanmsh/bhuang.dev.git
-   cd bhuang.dev
-   ```
-
-2. Start any local HTTP server:
-   ```bash
-   # Using Python 3
-   python -m http.server 8000
-   ```
-   Or open `index.html` directly in your browser.
-
-3. Navigate to `http://localhost:8000`.
-
----
-
 ## 📬 Contact
 
 - **Website:** [bhuang.dev](https://bhuang.dev)
