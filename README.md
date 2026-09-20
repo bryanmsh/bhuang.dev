@@ -13,7 +13,7 @@ This repository hosts the source code for [bhuang.dev](https://bhuang.dev), a li
 ### Pages & Highlights
 
 - **Resume (`index.html`)**
-  - **Education:** B.S. in Computer Science at UMass Amherst (Early Research Scholars Program).
+  - **Education:** B.S. in Computer Science at UMass Amherst (Early Research Scholars Program, Student Government Association).
   - **Work Experience:** UMass Admissions (Student Staff), UMass Student Government Association (SGA Senator, AI Taskforce).
   - **Certifications:** FAA Part 107 Remote Pilot, FAA TRUST, Autodesk AutoCAD & Revit Certified, ICC Building Code.
   - **Skills:** Python, Java, AutoHotkey, SOLIDWORKS, AutoCAD, Fusion 360, Revit, Onshape.
