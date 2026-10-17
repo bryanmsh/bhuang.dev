@@ -1,0 +1,6 @@
+# Keep local notes and original input files out of GitHub Pages output.
+exclude:
+  - README.md
+  - SECURITY.md
+  - resume.md
+  - images/BHuang_resume.pdf

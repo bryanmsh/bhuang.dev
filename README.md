@@ -20,6 +20,7 @@ This repository hosts the source code for [bhuang.dev](https://bhuang.dev), a li
   - **Contact:** Interactive contact modal with direct contact channels.
 - **Projects (`projects.html`)**
   - **Neural Network from Scratch:** Multilayer perceptron (784-16-16-10) with hand-derived matrix backpropagation and custom stochastic gradient descent (SGD) achieving ~94.2% test accuracy on MNIST digits without ML libraries.
+  - **Titanic Classification Pipeline:** Fold-isolated preprocessing, custom feature transformers, and model selection achieving 0.894 cross-validation ROC-AUC.
   - **Deck Arch Truss Bridge Design:** Three years of competitive structural design, 1st Place State Champions in the Delaware Bridge Design Competition.
 - **Engineering Case Study (`engineering.html`)**
   - Detailed case study of CAD modeling, FEA stress/displacement simulations in SOLIDWORKS, empirical calibration (2.52–3.02 scaling factors), and steam-bent monolithic arch manufacturing.
@@ -41,3 +42,14 @@ This repository hosts the source code for [bhuang.dev](https://bhuang.dev), a li
 - **LinkedIn:** [linkedin.com/in/bmhuang](https://linkedin.com/in/bmhuang)
 - **GitHub:** [@bryanmsh](https://github.com/bryanmsh)
 - **Email:** [bryanmsh@gmail.com](mailto:bryanmsh@gmail.com)
+
+## Portfolio assets
+
+- `site.css`: shared typography, responsive layout, colors, and components.
+- `images/lipfp.png`: profile portrait.
+- `images/libanner.jpg`: portfolio banner.
+- `docs/Bryan-Huang-Resume.pdf`: public resume without a phone number or document metadata. The original PDF stays local.
+
+Open `index.html` directly or use VS Code Live Server to preview locally.
+
+Fonts are served locally under their bundled SIL Open Font Licenses in `assets/fonts/`. No visitor analytics, cookies, or external scripts are used. See `SECURITY.md` for the security and privacy audit and manual GitHub settings.

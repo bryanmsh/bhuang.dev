@@ -2,19 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="referrer" content="no-referrer" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bryan Huang | Projects</title>
   <meta name="description" content="Software and engineering projects by Bryan Huang." />
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="./favicon.ico" />
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png" />
+  <link rel="icon" type="image/svg+xml" href="./images/favicon.svg" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/fonts/fonts.css" />
 
   <style>
     :root {
@@ -326,27 +321,31 @@
       gap: 1rem;
     }
   </style>
+  <link rel="stylesheet" href="./site.css" />
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <div class="container">
-    <nav>
+    <nav aria-label="Main navigation">
       <a href="./index.html" class="nav-brand">Bryan Huang</a>
       <div class="nav-links">
-        <a href="./index.html" class="nav-link">Resume</a>
-        <a href="./projects.html" class="nav-link active">Projects</a>
-        <button class="btn btn-primary" onclick="openContactModal()">Contact</button>
+        <a href="./index.html" class="nav-link">About</a>
+        <a href="./projects.html" class="nav-link active" aria-current="page">Projects</a>
+        <a href="./docs/Bryan-Huang-Resume.pdf" class="nav-link" target="_blank" rel="noopener noreferrer">Resume &nearr;</a>
+        <button class="btn btn-primary" data-open-contact>Contact</button>
       </div>
     </nav>
 
+    <main id="main-content">
     <header>
       <h1>Projects</h1>
-      <p class="page-desc">Featured technical projects spanning deep learning, machine simulation, and structural design.</p>
+      <p class="page-desc">Machine learning from first principles, reliable classification pipelines, and structural engineering.</p>
     </header>
 
     <div class="projects-grid">
       
       <!-- Project 1: Neural Network from Scratch -->
-      <article class="project-card">
+      <article class="project-card" id="mnist">
         <div class="project-header">
           <h2 class="project-title" style="margin: 0; font-size: 1.25rem;">Neural Network from Scratch (MNIST Digit Identifier)</h2>
           <span class="project-meta">Python &bull; NumPy</span>
@@ -354,7 +353,7 @@
         <div class="project-subtitle">Multilayer Perceptron &amp; Hand-Derived Backpropagation</div>
 
         <figure class="project-figure white-bg">
-          <a href="./images/mnist-neural-net-demo.png" target="_blank" rel="noopener" title="Click to view full image">
+          <a href="./images/mnist-neural-net-demo.png" target="_blank" rel="noopener noreferrer" title="Click to view full image">
             <img src="./images/mnist-neural-net-demo.png" alt="MNIST handwritten digit classification demo showing activation probabilities" loading="lazy" />
           </a>
           <figcaption>Interactive inspector: classifying test digit '2' alongside output layer activation probabilities (99%+ confidence)</figcaption>
@@ -363,19 +362,28 @@
         <ul class="bullets">
           <li>Engineered and implemented a multilayer perceptron (784-16-16-10 structure, ~13K parameters) from scratch using NumPy with no machine learning libraries.</li>
           <li>Derived analytical matrix gradients by hand to train with a custom stochastic gradient descent (SGD) loop, achieving <strong>~94.2% test accuracy</strong>.</li>
-          <li>Designed a modular, object-oriented architecture supporting arbitrary layer dimensions and network depths.</li>
+          <li>Built a binary IDX parser with Python&rsquo;s struct module to unpack raw MNIST bytes into normalized arrays.</li>
           <li>Profiled training bottlenecks between full-batch and stochastic gradient descent, discovering parameter update cadence to be the critical factor for rapid convergence.</li>
         </ul>
         <div class="tags">
           <span class="tag">Python</span>
           <span class="tag">NumPy</span>
+          <span class="tag">Matplotlib</span>
           <span class="tag">Neural Networks</span>
           <span class="tag">Backpropagation</span>
           <span class="tag">SGD Optimization</span>
         </div>
         <div class="project-actions">
-          <a href="https://github.com/bryanmsh/neural-net-from-scratch" target="_blank" rel="noopener" class="btn">View on GitHub ↗</a>
+          <a href="https://github.com/bryanmsh/neural-net-from-scratch" target="_blank" rel="noopener noreferrer" class="btn">View on GitHub ↗</a>
         </div>
+      </article>
+
+      <article class="project-card" id="titanic">
+        <div class="project-header"><h2 class="project-title">End-to-End Tabular Classification Pipeline (Titanic)</h2><span class="project-meta">2026</span></div>
+        <div class="project-subtitle">Custom feature engineering &amp; leakage-safe model evaluation</div>
+        <ul class="bullets"><li>Built a Scikit-Learn classification pipeline with fold-isolated preprocessing to prevent data leakage.</li><li>Implemented custom transformers for title, family, and cabin features, with conditional age imputation.</li><li>Compared Logistic Regression, Random Forest, and Gradient Boosting using GridSearchCV, achieving <strong>0.894 cross-validation ROC-AUC</strong>.</li></ul>
+        <div class="tags"><span class="tag">Python</span><span class="tag">Scikit-Learn</span><span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">GridSearchCV</span></div>
+        <div class="project-actions"><a href="https://github.com/bryanmsh/titanic-survival-classifier" target="_blank" rel="noopener noreferrer" class="btn">View on GitHub &nearr;</a></div>
       </article>
 
       <!-- Project 2: Deck Arch Truss Engineering Portfolio -->
@@ -387,7 +395,7 @@
         <div class="project-subtitle">Delaware Bridge Design Competition &bull; 1st Place State Champions</div>
 
         <figure class="project-figure">
-          <a href="./images/bridge-2025-technical-drawing.png" target="_blank" rel="noopener" title="Click to view full resolution">
+          <a href="./images/bridge-2025-technical-drawing.png" target="_blank" rel="noopener noreferrer" title="Click to view full resolution">
             <img src="./images/bridge-2025-technical-drawing.png" alt="Complete AutoCAD technical blueprint: plan, elevation, section A-A, and isometric views with full dimensioning" loading="lazy" />
           </a>
           <figcaption>Complete AutoCAD technical blueprint: plan, elevation, section A-A, and isometric views with full dimensioning (Delaware Bridge Design Competition &bull; Team: The Peculiar Pythons &bull; Rev 8)</figcaption>
@@ -412,26 +420,23 @@
 
     </div>
 
+    </main>
     <footer>
       <span>&copy; 2026 Bryan Huang</span>
-      <span>Hosted via GitHub Pages</span>
+      <a href="https://www.linkedin.com/in/bmhuang/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn &nearr;</a>
     </footer>
   </div>
 
   <!-- Contact Modal -->
-  <dialog id="contactModal">
+  <dialog id="contactModal" aria-labelledby="contact-title">
     <div class="modal-header">
-      <h3>Contact Information</h3>
-      <button class="close-btn" onclick="closeContactModal()">&times;</button>
+      <h3 id="contact-title">Let's connect</h3>
+      <button class="close-btn" aria-label="Close contact information" data-close-contact>&times;</button>
     </div>
     <div class="modal-content">
       <div class="contact-item">
         <div class="contact-label">Email Address</div>
         <a href="mailto:bryanmsh@gmail.com" class="contact-value">bryanmsh@gmail.com</a>
-      </div>
-      <div class="contact-item">
-        <div class="contact-label">Phone Number</div>
-        <a href="tel:3476103822" class="contact-value">347-610-3822</a>
       </div>
       <div class="contact-item">
         <div class="contact-label">Location</div>
@@ -440,16 +445,6 @@
     </div>
   </dialog>
 
-  <script>
-    const modal = document.getElementById('contactModal');
-    function openContactModal() { modal.showModal(); }
-    function closeContactModal() { modal.close(); }
-    modal.addEventListener('click', (e) => {
-      const rect = modal.getBoundingClientRect();
-      if (e.clientY < rect.top || e.clientY > rect.bottom || e.clientX < rect.left || e.clientX > rect.right) {
-        modal.close();
-      }
-    });
-  </script>
+  <script src="./contact.js" defer></script>
 </body>
 </html>

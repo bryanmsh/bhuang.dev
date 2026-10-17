@@ -1,0 +1,21 @@
+# Local secrets and credentials must never be published.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+.aws/
+.codex/
+.agents/
+
+# Local editor files and older resume working notes.
+.vscode/
+.idea/
+/resume.md
+.DS_Store
+Thumbs.db
+
+# Keep the original resume private; publish the sanitized copy in docs/.
+/images/BHuang_resume.pdf

@@ -2,19 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="referrer" content="no-referrer" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bryan Huang | Engineering Portfolio</title>
   <meta name="description" content="Deck Arch Truss Bridge Engineering Case Study by Bryan Huang." />
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="./favicon.ico" />
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png" />
+  <link rel="icon" type="image/svg+xml" href="./images/favicon.svg" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/fonts/fonts.css" />
 
   <style>
     :root {
@@ -342,18 +337,22 @@
       gap: 1rem;
     }
   </style>
+  <link rel="stylesheet" href="./site.css" />
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <div class="container">
-    <nav>
+    <nav aria-label="Main navigation">
       <a href="./index.html" class="nav-brand">Bryan Huang</a>
       <div class="nav-links">
-        <a href="./index.html" class="nav-link">Resume</a>
-        <a href="./projects.html" class="nav-link active">Projects</a>
-        <button class="btn btn-primary" onclick="openContactModal()">Contact</button>
+        <a href="./index.html" class="nav-link">About</a>
+        <a href="./projects.html" class="nav-link active" aria-current="page">Projects</a>
+        <a href="./docs/Bryan-Huang-Resume.pdf" class="nav-link" target="_blank" rel="noopener noreferrer">Resume &nearr;</a>
+        <button class="btn btn-primary" data-open-contact>Contact</button>
       </div>
     </nav>
 
+    <main id="main-content">
     <header>
       <h1>Engineering Portfolio</h1>
       <div class="meta-subtitle">Deck Arch Truss Bridge Design &amp; Optimization (2023–2025)</div>
@@ -372,7 +371,7 @@
       </div>
 
       <figure class="project-figure" style="margin-top: 1.5rem; margin-bottom: 0;">
-        <a href="./images/bridge-truss-research.jpg" target="_blank" rel="noopener" title="Click to view full resolution">
+        <a href="./images/bridge-truss-research.jpg" target="_blank" rel="noopener noreferrer" title="Click to view full resolution">
           <img src="./images/bridge-truss-research.jpg" alt="Truss typology research and load distribution analysis" loading="lazy" />
         </a>
         <figcaption>Truss typology research &amp; load path analysis: evaluating Howe, Pratt, and Warren configurations to drive center loads outward to the abutments.</figcaption>
@@ -390,13 +389,13 @@
 
       <div class="figure-grid">
         <figure class="project-figure">
-          <a href="./images/bridge-2023-design-sketches.jpg" target="_blank" rel="noopener" title="Click to view full resolution">
+          <a href="./images/bridge-2023-design-sketches.jpg" target="_blank" rel="noopener noreferrer" title="Click to view full resolution">
             <img src="./images/bridge-2023-design-sketches.jpg" alt="Concept sketches from engineering notebook (3/6/2023) and SOLIDWORKS FEA displacement model" loading="lazy" />
           </a>
           <figcaption>Engineering notebook concept sketches (3/6/2023) translated into a calibrated SOLIDWORKS FEA displacement model.</figcaption>
         </figure>
         <figure class="project-figure">
-          <a href="./images/bridge-2023-assembly.jpg" target="_blank" rel="noopener" title="Click to view full resolution">
+          <a href="./images/bridge-2023-assembly.jpg" target="_blank" rel="noopener noreferrer" title="Click to view full resolution">
             <img src="./images/bridge-2023-assembly.jpg" alt="Hand-cutting and assembling balsa wood components on 1:1 blueprint" loading="lazy" />
           </a>
           <figcaption>Component fabrication against 1:1 blueprint scale and 30–40 hour precision balsa assembly.</figcaption>
@@ -419,13 +418,13 @@
 
       <div class="figure-grid">
         <figure class="project-figure">
-          <a href="./images/bridge-2024-aux-arch.png" target="_blank" rel="noopener" title="Click to view full resolution">
+          <a href="./images/bridge-2024-aux-arch.png" target="_blank" rel="noopener noreferrer" title="Click to view full resolution">
             <img src="./images/bridge-2024-aux-arch.png" alt="3D SOLIDWORKS CAD model of the auxiliary-arch truss structure" loading="lazy" />
           </a>
           <figcaption>3D SOLIDWORKS CAD model of the 2024 auxiliary-arch truss structure.</figcaption>
         </figure>
         <figure class="project-figure">
-          <a href="./images/bridge-2024-process.jpg" target="_blank" rel="noopener" title="Click to view full resolution">
+          <a href="./images/bridge-2024-process.jpg" target="_blank" rel="noopener noreferrer" title="Click to view full resolution">
             <img src="./images/bridge-2024-process.jpg" alt="2024 engineering process: concept sketches, 3D FEA stress simulation, and precision pin-jig assembly" loading="lazy" />
           </a>
           <figcaption>2024 engineering process: concept sketches, 3D FEA stress simulation, and precision pin-jig assembly.</figcaption>
@@ -448,13 +447,13 @@
 
       <div class="figure-grid">
         <figure class="project-figure">
-          <a href="./images/bridge-2025-iterations.jpg" target="_blank" rel="noopener" title="Click to view full resolution">
+          <a href="./images/bridge-2025-iterations.jpg" target="_blank" rel="noopener noreferrer" title="Click to view full resolution">
             <img src="./images/bridge-2025-iterations.jpg" alt="Calibrated SOLIDWORKS CAD progression: Design 1 baseline vs. final Revision 8" loading="lazy" />
           </a>
           <figcaption>Calibrated SOLIDWORKS CAD progression: Design 1 baseline vs. final Revision 8.</figcaption>
         </figure>
         <figure class="project-figure">
-          <a href="./images/bridge-2025-bending-jig.jpg" target="_blank" rel="noopener" title="Click to view full resolution">
+          <a href="./images/bridge-2025-bending-jig.jpg" target="_blank" rel="noopener noreferrer" title="Click to view full resolution">
             <img src="./images/bridge-2025-bending-jig.jpg" alt="Custom wooden radial clamping jig for steam-bending the continuous monolithic arch" loading="lazy" />
           </a>
           <figcaption>Custom radial clamping jig for steam-bending the continuous monolithic arch.</figcaption>
@@ -470,14 +469,14 @@
       </ul>
 
       <figure class="project-figure" style="margin-top: 1.5rem;">
-        <a href="./images/bridge-2025-technical-drawing.png" target="_blank" rel="noopener" title="Click to view full resolution">
+        <a href="./images/bridge-2025-technical-drawing.png" target="_blank" rel="noopener noreferrer" title="Click to view full resolution">
           <img src="./images/bridge-2025-technical-drawing.png" alt="Complete AutoCAD 2D technical blueprint with dimensioning" loading="lazy" />
         </a>
         <figcaption>Complete AutoCAD technical blueprint: plan, elevation, section A-A, and isometric views with full dimensioning (Delaware Bridge Design Competition &bull; Team: The Peculiar Pythons &bull; Rev 8).</figcaption>
       </figure>
 
       <figure class="project-figure" style="margin-top: 1.5rem;">
-        <a href="./images/bridge-2025-load-test.jpg" target="_blank" rel="noopener" title="Click to view full resolution">
+        <a href="./images/bridge-2025-load-test.jpg" target="_blank" rel="noopener noreferrer" title="Click to view full resolution">
           <img src="./images/bridge-2025-load-test.jpg" alt="Official load testing of the final 2025 bridge on the competition testing platform" loading="lazy" />
         </a>
         <figcaption>Official load testing of the final 2025 design on the competition testing platform at the Delaware Bridge Design Competition.</figcaption>
@@ -492,6 +491,7 @@
       </blockquote>
     </div>
 
+    </main>
     <footer>
       <a href="./projects.html" class="btn">&larr; Back to Projects</a>
       <span>Bryan Huang &bull; Engineering Portfolio</span>
@@ -499,19 +499,15 @@
   </div>
 
   <!-- Contact Modal -->
-  <dialog id="contactModal">
+  <dialog id="contactModal" aria-labelledby="contact-title">
     <div class="modal-header">
-      <h3>Contact Information</h3>
-      <button class="close-btn" onclick="closeContactModal()">&times;</button>
+      <h3 id="contact-title">Let's connect</h3>
+      <button class="close-btn" aria-label="Close contact information" data-close-contact>&times;</button>
     </div>
     <div class="modal-content">
       <div class="contact-item">
         <div class="contact-label">Email Address</div>
         <a href="mailto:bryanmsh@gmail.com" class="contact-value">bryanmsh@gmail.com</a>
-      </div>
-      <div class="contact-item">
-        <div class="contact-label">Phone Number</div>
-        <a href="tel:3476103822" class="contact-value">347-610-3822</a>
       </div>
       <div class="contact-item">
         <div class="contact-label">Location</div>
@@ -520,16 +516,6 @@
     </div>
   </dialog>
 
-  <script>
-    const modal = document.getElementById('contactModal');
-    function openContactModal() { modal.showModal(); }
-    function closeContactModal() { modal.close(); }
-    modal.addEventListener('click', (e) => {
-      const rect = modal.getBoundingClientRect();
-      if (e.clientY < rect.top || e.clientY > rect.bottom || e.clientX < rect.left || e.clientX > rect.right) {
-        modal.close();
-      }
-    });
-  </script>
+  <script src="./contact.js" defer></script>
 </body>
 </html>
