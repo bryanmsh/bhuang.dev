@@ -40,7 +40,7 @@
             <p class="hero-intro">I&rsquo;m a computer science student and AI research assistant in the DREAM Lab. My work spans GPU memory scheduling, machine learning from first principles, and engineering through simulation and physical testing.</p>
             <div class="quick-links">
               <a href="./projects.html" class="btn btn-primary">Explore my projects &rarr;</a>
-              <a href="./docs/Bryan-Huang-Resume.pdf" class="btn" download>Download resume &darr;</a>
+              <a href="./docs/Bryan-Huang-Resume.pdf" class="btn" target="_blank" rel="noopener noreferrer">View resume &nearr;</a>
             </div>
             <div class="social-links">
               <a href="https://github.com/bryanmsh" target="_blank" rel="noopener noreferrer">GitHub &nearr;</a>
@@ -64,15 +64,43 @@
         <div class="section-heading"><div><p class="eyebrow">Learning through building</p><h2>Selected work</h2></div><a class="text-link" href="./projects.html">All projects &rarr;</a></div>
         <div class="work-grid">
           <article class="work-card">
+            <a class="pipeline-visual" href="./projects.html#miraai"><span class="pipeline-step">Original picture book</span><span class="pipeline-arrow" aria-hidden="true">&darr;</span><span class="pipeline-step">Subject segmentation</span><span class="pipeline-arrow" aria-hidden="true">&darr;</span><span class="pipeline-step">Teacher-approved pages</span></a>
+            <div class="work-body">
+              <p class="project-kicker">Computer vision &middot; 2026</p>
+              <h3><a href="./projects.html#miraai">Miraai</a></h3>
+              <p>Adapts picture books for children with cortical visual impairment using subject cut-outs and teacher-approved display settings.</p>
+              <p class="result">0.897 mean IoU on held-out illustrated pages</p>
+              <div class="tags"><span class="tag">PyTorch</span><span class="tag">FastAPI</span><span class="tag">React</span></div>
+              <a class="text-link" href="./projects.html#miraai">View project &rarr;</a>
+            </div>
+          </article>
+          <article class="work-card">
             <a class="work-image light-image" href="./projects.html#mnist"><img src="./images/mnist-neural-net-demo.png" alt="MNIST digit classifier showing output probabilities for a handwritten digit" width="1270" height="958" loading="lazy" /></a>
             <div class="work-body"><p class="project-kicker">Machine learning &middot; 2026</p><h3><a href="./projects.html#mnist">Neural network from scratch</a></h3><p>A NumPy multilayer perceptron with hand-derived backpropagation, a binary MNIST parser, and custom SGD.</p><p class="result">~94.2% test accuracy</p><div class="tags"><span class="tag">Python</span><span class="tag">NumPy</span><span class="tag">Matplotlib</span></div><a class="text-link" href="https://github.com/bryanmsh/neural-net-from-scratch" target="_blank" rel="noopener noreferrer">View code &nearr;</a></div>
           </article>
           <article class="work-card">
-            <a class="pipeline-visual" href="./projects.html#titanic" aria-label="Explore the Titanic classification pipeline"><span class="pipeline-caption">TITANIC / CLASSIFICATION</span><span class="pipeline-step">Raw passenger data</span><span class="pipeline-arrow" aria-hidden="true">&darr;</span><span class="pipeline-step">Fold-isolated preprocessing</span><span class="pipeline-arrow" aria-hidden="true">&darr;</span><span class="pipeline-step">Model selection &amp; evaluation</span></a>
-            <div class="work-body"><p class="project-kicker">Applied machine learning &middot; 2026</p><h3><a href="./projects.html#titanic">Tabular classification pipeline</a></h3><p>A complete Scikit-Learn workflow with custom feature engineering, leakage prevention, and model comparison.</p><p class="result">0.894 cross-validation ROC-AUC</p><div class="tags"><span class="tag">Scikit-Learn</span><span class="tag">Pandas</span><span class="tag">NumPy</span></div><a class="text-link" href="https://github.com/bryanmsh/titanic-survival-classifier" target="_blank" rel="noopener noreferrer">View code &nearr;</a></div>
+            <a class="pipeline-visual" href="./projects.html#careleap"><span class="pipeline-step">Bus schedules and clinic hours</span><span class="pipeline-arrow" aria-hidden="true">&darr;</span><span class="pipeline-step">Round-trip routing</span><span class="pipeline-arrow" aria-hidden="true">&darr;</span><span class="pipeline-step">Appointment access</span></a>
+            <div class="work-body">
+              <p class="project-kicker">Transit accessibility &middot; 2026</p>
+              <h3><a href="./projects.html#careleap">CareLeap</a></h3>
+              <p>Checks whether patients can reach clinic appointments by bus and get home, and helps clinics compare appointment times.</p>
+              <p class="result">Round-trip routing across PVTA and FRTA</p>
+              <div class="tags"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">React</span><span class="tag">MCP</span></div>
+              <a class="text-link" href="./projects.html#careleap">View project &rarr;</a>
+            </div>
+          </article>
+          <article class="work-card">
+            <a class="work-image light-image" href="./engineering.html"><img src="./images/bridge-2025-technical-drawing.png" alt="AutoCAD bridge technical drawing" width="1963" height="1274" loading="lazy" /></a>
+            <div class="work-body">
+              <p class="project-kicker">Engineering &middot; 2023&ndash;2025</p>
+              <h3><a href="./engineering.html">Deck arch truss bridge</a></h3>
+              <p>Designed, simulated, and fabricated balsa wood bridges across three years of competition.</p>
+              <p class="result">1st place, Delaware Bridge Design Competition</p>
+              <div class="tags"><span class="tag">SOLIDWORKS</span><span class="tag">AutoCAD</span><span class="tag">FEA</span></div>
+              <a class="text-link" href="./engineering.html">Read the case study &rarr;</a>
+            </div>
           </article>
         </div>
-        <a class="engineering-feature" href="./engineering.html"><img src="./images/bridge-2025-technical-drawing.png" alt="AutoCAD bridge technical drawing" width="1963" height="1274" loading="lazy" /><div><p class="project-kicker">Engineering &middot; 2023&ndash;2025</p><h3>From simulation to structure</h3><p>Three years of bridge design, finite element analysis, and fabrication. First place at the Delaware Bridge Design Competition.</p><span class="text-link">Read the engineering case study &rarr;</span></div></a>
       </section>
       <section id="experience"><div class="section-heading"><div><p class="eyebrow">Research &amp; leadership</p><h2>Experience</h2></div></div><div class="item-list"><article class="card"><div class="card-header"><h3 class="title">Artificial Intelligence Research Assistant</h3><span class="date">Sep. 2026 &ndash; Present</span></div><p class="subtitle">UMass Amherst &middot; DREAM Lab</p><ul class="bullets"><li>Investigate memory-aware GPU scheduling in Kalypso, a system for executing pipelined LLM filters and joins.</li><li>Design a Python workload harness that independently varies filter selectivity and join fanout to compare adaptive and fixed GPU memory allocations using throughput, time to first token (TTFT), and inter-token latency (ITL).</li></ul></article><article class="card"><div class="card-header"><h3 class="title">Admissions Student Staff</h3><span class="date">Oct. 2026 &ndash; Present</span></div><p class="subtitle">University of Massachusetts Amherst Admissions &middot; Sunderland, MA</p><ul class="bullets"><li>Analyze transcripts and recalculate prospective students&rsquo; GPAs using MBHE standards.</li></ul></article><article class="card"><div class="card-header"><h3 class="title">SGA Senator</h3><span class="date">Oct. 2025 &ndash; May 2026</span></div><p class="subtitle">UMass Student Government Association &middot; Academic Oversight, Ways &amp; Means</p><ul class="bullets"><li>Initiated and co-led the UMass AI Taskforce on Undergraduate Student AI Literacy.</li><li>Deliberated $4.2M Student Activities Trust Fund allocations, reviewed approximately 75 RSO budgets, and evaluated funding guidelines across 400+ student organizations.</li><li>Proposed updated funding requirements and operational recommendations.</li></ul></article></div></section>
       <section id="education"><div class="section-heading"><div><p class="eyebrow">Academic foundation</p><h2>Education</h2></div></div><div class="item-list"><article class="card"><div class="card-header"><h3 class="title">University of Massachusetts Amherst</h3><span class="date">Expected May 2028</span></div><p class="subtitle">B.S. in Computer Science &middot; GPA: 3.89/4.00</p><ul class="bullets"><li>Dean&rsquo;s List &middot; Chancellor&rsquo;s Award Scholarship ($72k).</li><li><strong>Coursework:</strong> Data Structures, Discrete Mathematics, Probability, Linear Algebra, Multivariable Calculus.</li></ul></article><article class="card"><div class="card-header"><h3 class="title">Polytech High School</h3><span class="date">Aug. 2021 &ndash; June 2025</span></div><p class="subtitle">Engineering Design Technology &middot; GPA: 4.00/4.00</p><ul class="bullets"><li>Valedictorian &middot; Secretary of Education Scholar.</li><li>Class President (2022&ndash;2025); led 10+ school-wide events.</li></ul></article></div></section>
