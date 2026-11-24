@@ -524,3 +524,28 @@ nav.section-links { justify-content: flex-start; margin: 0 0 3.5rem; padding: 1.
   .nav-link, .social-links a, .section-links a, a.text-link { min-height: 44px; display: inline-flex; align-items: center; }
   .btn { min-height: 44px; }
 }
+
+.miraai-demo-trigger { position: relative; }
+.miraai-demo-trigger.work-image { background: #090d13; }
+.miraai-play {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  background: #0d1117;
+  color: #fff;
+}
+.miraai-demo-trigger:focus-visible .miraai-play,
+.miraai-demo-trigger:hover .miraai-play { background: #1f6feb; }
+.miraai-demo-video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #090d13;
+}
+.work-card .miraai-demo-video { height: 250px; }
