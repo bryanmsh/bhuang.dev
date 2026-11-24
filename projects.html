@@ -339,11 +339,65 @@
     <main id="main-content">
     <header>
       <h1>Projects</h1>
-      <p class="page-desc">Machine learning from first principles, reliable classification pipelines, and structural engineering.</p>
+      <p class="page-desc">Accessibility tools, machine learning, and structural engineering.</p>
     </header>
 
     <div class="projects-grid">
       
+      <article class="project-card" id="miraai">
+        <div class="project-header">
+          <h2 class="project-title">Miraai</h2>
+          <span class="project-meta">HackUMass XIV &bull; 2026</span>
+        </div>
+        <div class="project-subtitle">Teacher-reviewed picture books for children with cortical visual impairment</div>
+        <ul class="bullets">
+          <li>Built with a four-person team to extract subjects from original artwork and let teachers adjust contrast, color, size, and position before approving pages for each child.</li>
+          <li>Co-trained a 7.8M-parameter PyTorch U-Net from scratch. On 100 held-out illustrated pages, it reached <strong>0.897 mean IoU</strong> versus SAM 2.1&rsquo;s 0.906 and ran <strong>about 5&times; as fast</strong> on an NVIDIA L4 GPU.</li>
+          <li>Calibrated a cascade that sends uncertain masks to SAM 2.1. At the benchmarked threshold, the U-Net handled <strong>67% of cut-outs</strong> with <strong>0.919 mean IoU agreement with SAM 2.1</strong> on accepted masks.</li>
+          <li>Deployed to Vultr with Docker and Caddy, and set up automatic deployment and branch protection.</li>
+        </ul>
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">PyTorch</span>
+          <span class="tag">FastAPI</span>
+          <span class="tag">React</span>
+          <span class="tag">TypeScript</span>
+          <span class="tag">Docker</span>
+        </div>
+        <div class="project-actions">
+          <a href="https://github.com/bryanmsh/miraai" target="_blank" rel="noopener noreferrer" class="btn">View on GitHub &nearr;</a>
+          <a href="https://www.youtube.com/watch?v=5-VnosZ5yUA" target="_blank" rel="noopener noreferrer" class="btn">Watch demo &nearr;</a>
+        </div>
+      </article>
+
+      <article class="project-card" id="careleap">
+        <div class="project-header">
+          <h2 class="project-title">CareLeap</h2>
+          <span class="project-meta">Hackachusetts &bull; 2026</span>
+        </div>
+        <div class="project-subtitle">Round-trip transit planning and clinic accessibility audits</div>
+        <ul class="bullets">
+          <li>Built with a four-person team to help patients plan visits and help clinics compare appointment times by round-trip transit access.</li>
+          <li>Extended the RAPTOR router across PVTA and FRTA to check whether patients could get to a clinic and catch a ride home.</li>
+          <li>Implemented Census-based 90% confidence intervals for access estimates and mapped <strong>86 rural block groups</strong> where an estimated <strong>3,270 adults without cars</strong> had modeled access only through assisted rides.</li>
+          <li>Sourced clinic hours, ride services, and visit rules, then exposed them through MCP and a FastAPI report endpoint. Added Hypothesis tests for routing, equity estimates, and planner rules, and ran the official GTFS validator.</li>
+        </ul>
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">NumPy</span>
+          <span class="tag">FastAPI</span>
+          <span class="tag">React</span>
+          <span class="tag">TypeScript</span>
+          <span class="tag">MCP</span>
+          <span class="tag">GTFS</span>
+        </div>
+        <div class="project-actions">
+          <a href="https://github.com/bryanmsh/CareLeap" target="_blank" rel="noopener noreferrer" class="btn">View on GitHub &nearr;</a>
+          <a href="https://careleap-production.up.railway.app/" target="_blank" rel="noopener noreferrer" class="btn">Live demo &nearr;</a>
+          <a href="https://careleap-production.up.railway.app/docs" target="_blank" rel="noopener noreferrer" class="btn">API demo &nearr;</a>
+        </div>
+      </article>
+
       <!-- Project 1: Neural Network from Scratch -->
       <article class="project-card" id="mnist">
         <div class="project-header">
